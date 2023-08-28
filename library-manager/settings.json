@@ -1,0 +1,22 @@
+{
+	"versions_etag": "W/\"ac50c92650d7d91:0\"",
+	"titles_etag": "W/\"e543ce5fdd8d91:0\"",
+	"prod_keys": "./prod.keys",
+	"folder": "/games",
+	"scan_folders": ["/games"],
+	"gui": false,
+	"debug": false,
+	"check_for_missing_updates": true,
+	"check_for_missing_dlc": true,
+	"organize_options": {
+		"create_folder_per_game": true,
+		"rename_files": true,
+		"delete_empty_folders": true,
+		"delete_old_update_files": true,
+		"folder_name_template": "{TITLE_NAME}",
+		"switch_safe_file_names": true,
+		"file_name_template": "{TITLE_NAME} ({DLC_NAME})[{TITLE_ID}][v{VERSION}]"
+	},
+	"scan_recursively": true,
+	"gui_page_size": 100
+}

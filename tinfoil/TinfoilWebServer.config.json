@@ -1,0 +1,52 @@
+{
+	"ServedDirectories": [ "/games" ],
+	"StripDirectoryNames": true,
+	"ServeEmptyDirectories": false,
+	"AllowedExt": [ "nsp", "nsz", "xci" ],
+	"MessageOfTheDay": "Welcome to my personal Tinfoil Web Server! if you are seeing this, you are probably a friend of mine. If you are not, please leave. but remember, fuck nintendo",
+	"ExtraRepositories": [],
+	"CacheExpiration": {
+	  "Enabled": true,
+	  "ExpirationDelay": "01:00:00"
+	},
+	"Authentication": {
+	  "Enabled": true,
+	  "WebBrowserAuthEnabled": true,
+	  "Users": [
+		{
+		  "Name": "macron",
+		  "Pwd": "demission"
+		}
+	  ]
+	},
+	"Blacklist": {
+	  "Enabled": true,
+	  "FilePath": "blacklist.txt",
+	  "MaxConsecutiveFailedAuth": 3,
+	  "IsBehindProxy": false
+	},
+	"Kestrel": {
+	  "Endpoints": {
+		"Http": {
+		  "Url": "http://0.0.0.0:80"
+		}
+	  }
+	},
+	"Logging": {
+	  "LogLevel": {
+		"Default": "Information"
+	  },
+	  "Console": {
+		"LogLevel": {
+		  "Default": "Information"
+		}
+	  },
+	  "File": {
+		"Path": "TinfoilWebServer.log",
+		"Append": true,
+		"MinLevel": "Information",
+		"FileSizeLimitBytes": 1000000,
+		"MaxRollingFiles": 10
+	  }
+	}
+  }

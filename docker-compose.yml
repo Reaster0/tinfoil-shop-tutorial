@@ -1,0 +1,20 @@
+version: "3"
+services:
+  tinfoil-web-server:
+    build:
+      context: ./tinfoil
+      dockerfile: Dockerfile
+    container_name: tinfoil-web-server
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - ./games:/games
+    
+  library-manager:
+    build:
+      context: ./library-manager
+      dockerfile: Dockerfile
+    container_name: library-manager
+    volumes:
+      - ./games:/games
