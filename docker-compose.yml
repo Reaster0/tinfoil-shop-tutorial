@@ -1,20 +1,32 @@
 version: "3"
+# version 3 is the best
+
+
 services:
+  # this is tinfoil-web-server
   tinfoil-web-server:
+    # i want to build this service from a dockerfile
     build:
-      context: ./tinfoil
+      context: ./tinfoil-web-server
       dockerfile: Dockerfile
+    # i want to name this container tinfoil-web-server
     container_name: tinfoil-web-server
+    # i want to restart this service if it crashes
     restart: always
+    # i want to expose port 80 on the container to port 8000 on the host
     ports:
       - "8000:80"
+    # i want to store the games in a folder called games on the host
     volumes:
       - ./games:/games
-    
+  
+  # this is the library manager that will rearrange the games correctly
   library-manager:
+    # i want to build this service from a dockerfile
     build:
       context: ./library-manager
       dockerfile: Dockerfile
     container_name: library-manager
+    # my games are stored in a folder called games on the host
     volumes:
       - ./games:/games
