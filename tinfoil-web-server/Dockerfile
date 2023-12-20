@@ -15,7 +15,7 @@ RUN latest_release_url=$(curl -s https://api.github.com/repos/Myster-Tee/Tinfoil
 	&& chmod +x /TinfoilWebServer/TinfoilWebServer
 
 # copy the settings file from the host
-COPY ./settings.json /TinfoilWebServer/TinfoilWebServer.config.json
+COPY ./settings.json /TinfoilWebServer.config.json
 
 # run the app
 ENTRYPOINT ["/TinfoilWebServer/TinfoilWebServer"]
