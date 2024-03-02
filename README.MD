@@ -113,4 +113,4 @@ or
 
 ## wasen't so hard no?
 
-### if you have found this tutorial helpfull you can always tip me on [paypal](https://paypal.me/reasterDev), or send me some monero (they're soo crunchy) : ```46gXH9dmfReixASkA5c8jN9eR6At4ZSJBQ5DqWkaAEMsLXquiWQQuBe4D8wVT2Utuh54bDTHnF1ScjBT3vUtAgUX1uu5Baw``` cheers mates!
+### if you have found this tutorial helpfull you can always tip me some monero (they're soo crunchy) : ```46gXH9dmfReixASkA5c8jN9eR6At4ZSJBQ5DqWkaAEMsLXquiWQQuBe4D8wVT2Utuh54bDTHnF1ScjBT3vUtAgUX1uu5Baw``` cheers mates!
