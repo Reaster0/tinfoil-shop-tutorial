@@ -110,6 +110,53 @@ or
   docker-compose down
 ```
 
+#### Run docker container as a service on Ubuntu 24
+in this this example code cloned to your home directory
+to run service you need container:
+```
+cd tinfoil-shop-tutorial
+docker compose build
+```
+
+create file for your service:
+```
+sudo vim /etc/systemd/system/tinfoil-shop-tutorial.service
+```
+
+with following content:
+```
+[Unit]
+Description=Tinfoil Shop Tutorial Docker container
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash -c "docker compose -f /home/user/tinfoil-shop-tutorial/docker-compose.yml up --detach"
+ExecStop=/bin/bash -c "docker compose -f /home/user/tinfoil-shop-tutorial/docker-compose.yml stop"
+
+[Install]
+WantedBy=multi-user.target
+```
+than:
+```
+sudo systemctl enable tinfoil-shop-tutorial
+```
+
+check results:
+```
+sudo systemctl status tinfoil-shop-tutorial
+sudo systemctl start tinfoil-shop-tutorial
+sudo systemctl stop tinfoil-shop-tutorial
+```
+
+if something goes wrong check docker container logs:
+```
+docker ps
+docker logs REAL_CONTAINER_ID
+```
+
 
 ## wasen't so hard no?
 
